@@ -1,0 +1,22 @@
+-- Crear base de datos --
+create database energia4d;
+use	energia4d;
+
+-- Crear tabla --
+CREATE TABLE tbl_product (
+	codigo_barras DECIMAL(20) PRIMARY KEY,
+	nombre varchar(50) not null,
+    descripcion TEXT,
+    precio DECIMAL(10,2) not null,
+    stock int
+);
+
+-- Ver tabla --
+Select * from tbl_product;
+
+-- Insertar información --
+INSERT INTO tbl_product(codigo_barras, nombre, descripcion, precio, stock)
+VALUES ('7501048100408', 'Aceite Cristal', 'Aceite sin colesterol por su origen vegetal. Bote con 20lt', '1200', '4');
+
+commit;
+
