@@ -1,0 +1,42 @@
+-- Crear base de datos --
+create database energia4d;
+use	energia4d;
+
+-- Crear tabla --
+CREATE TABLE tbl_productos (
+	codigo_barras DECIMAL(13) UNSIGNED ZEROFILL NOT NULL,
+		PRIMARY KEY (codigo_barras),
+	nombre varchar(50) not null,
+    descripcion TEXT,
+    precio DECIMAL(10,2) not null,
+    stock int
+);
+
+-- Ver tabla --
+Select * from tbl_productos;
+
+-- Insertar información --
+INSERT INTO tbl_productos(codigo_barras, nombre, descripcion, precio, stock)
+VALUES ('0041789001956', 'Maruchan Camarón', 'Maruchan caja de 12pz de 64gr cu camarón', '165.00', '20');
+
+INSERT INTO tbl_productos(codigo_barras, nombre, descripcion, precio, stock)
+VALUES ('7501048100408', 'Aceite Cristal', 'Aceite vegetal cristal garrafón de 20 l', '800.00', '11');
+
+INSERT INTO tbl_productos(codigo_barras, nombre, descripcion, precio, stock)
+VALUES ('7501003305831', 'Mayonesa Heinz', 'Mayonesa Real Heinz Galon de 3.5 Kg', '293.00', '12');
+
+INSERT INTO tbl_productos(codigo_barras, nombre, descripcion, precio, stock)
+VALUES ('7501020515398', 'Leche Lala', 'Leche Lala 12pz de 1 litro deslactosada', '280.00', '23');
+
+INSERT INTO tbl_productos(codigo_barras, nombre, descripcion, precio, stock)
+VALUES ('7501058620200', 'Nescafé', 'Cafe Nescafé clásico 440g', '299.00', '13');
+
+
+
+-- Borrar Tablas -- 
+Drop table tbl_productoS;
+
+
+
+commit;
+
